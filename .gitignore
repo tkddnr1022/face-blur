@@ -1,0 +1,6 @@
+photos/*
+blurred/*
+!photos/.gitkeep
+!blurred/.gitkeep
+
+.venv/*
