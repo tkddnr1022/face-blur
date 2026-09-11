@@ -1,0 +1,5 @@
+# torch는 README의 CPU/GPU 안내에 따라 이 파일보다 먼저 설치하세요.
+# ultralytics가 PyPI의 CPU용 torch를 끌어오지 않게 하기 위함입니다.
+ultralytics==8.4.141
+opencv-python==5.0.0.93
+numpy==2.5.2
