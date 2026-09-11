@@ -16,12 +16,12 @@ venv\Scripts\activate          # Windows
 pip install ultralytics opencv-python numpy
 ```
 
-얼굴 전용 YOLO 가중치(`.pt`)를 준비하세요. 기본값은 `yolo26n-face.pt`입니다.
+얼굴 전용 YOLO 가중치(`.pt`)를 준비하세요.
 
 ## 사용법
 
 ```bash
-python blur_faces.py --input ./photos --output ./blurred --model yolo26n-face.pt --blur-strength 2 --conf 0.5
+python blur_faces.py --input ./photos --output ./blurred --model yolo26n-face.pt
 ```
 
 얼굴 전용 모델이 없으면, 일반 YOLO 모델로 사람을 잡고 상단 30%를 얼굴로 근사할 수 있습니다.

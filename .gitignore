@@ -4,3 +4,4 @@ blurred/*
 !blurred/.gitkeep
 
 .venv/*
+*.pt

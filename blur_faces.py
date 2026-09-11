@@ -53,7 +53,7 @@ def apply_blur(img, box, method="blur", strength=1.0):
         return img
 
     # 기본: 가우시안 블러
-    k = int(max(x2 - x1, y2 - y1) * 0.3 * strength)
+    k = int(max(x2 - x1, y2 - y1) * 0.6 * strength)
     k = k if k % 2 == 1 else k + 1
     k = max(k, 5)
     blurred = cv2.GaussianBlur(roi, (k, k), 0)
@@ -112,7 +112,7 @@ def main():
     parser = argparse.ArgumentParser(description="YOLO 기반 대량 얼굴 블러 처리")
     parser.add_argument("--input", required=True, help="원본 사진 폴더")
     parser.add_argument("--output", required=True, help="결과 저장 폴더")
-    parser.add_argument("--model", default="yolo26n-face.pt", help="YOLO 가중치 경로")
+    parser.add_argument("--model", required=True, help="YOLO 가중치 경로")
     parser.add_argument("--conf", type=float, default=0.25, help="탐지 신뢰도 임계값")
     parser.add_argument("--blur-strength", type=float, default=1.0, help="블러 강도 배수")
     parser.add_argument("--method", choices=["blur", "pixelate", "black"], default="blur")
